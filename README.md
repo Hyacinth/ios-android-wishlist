@@ -1,34 +1,16 @@
-**License**
-========================
+# WishList
 
-Copyright 2012 Facebook, Inc.
+Enables users to take a photo of a product, add the product to a wishlist, then share the story with friends.
 
-You are hereby granted a non-exclusive, worldwide, royalty-free license to
-use, copy, modify, and distribute this software in source code or binary
-form for use in connection with the web services and APIs provided by
-Facebook.
+The product gets stored on the backend server before publishing the story to Facebook.
 
-As with any software that integrates with the Facebook platform, your use
-of this software is subject to the [Facebook Developer Principles and
-Policies](http://developers.facebook.com/policy/). This copyright notice
-shall be included in all copies or substantial portions of the software.
+This sample app demonstrates how to build an Android and iOS app to publish custom Open Graph actions. The sample also includes a server-side component to host the Open Graph objects.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
+Authors: Christine Abernathy (caabernathy)
 
-**Wishlist Application**
-========================
+## Installing
 
-This sample application demonstrates how to build an Android and iOS app to publish custom Open Graph actions. The sample also includes a server-side component to host the Open Graph objects.
-
-Users of the app can take a photo of a product, add the product to a wishlist, then share the story with friends. The product gets stored on the backend server before publishing the story to Facebook.
-
-This README will walk you through the following:
+This section will walk you through the following:
 
 * Getting Started
 * Creating your Facebook app
@@ -37,8 +19,7 @@ This README will walk you through the following:
 * Installing the Android app
 * Installing the iOS app
 
-**Getting Started**
-===================
+### Getting Started
 
 Your install package should have the following files:
 
@@ -49,7 +30,7 @@ Your install package should have the following files:
   * wishlists/holiday.php
   * wishlists/wedding.php
   * images
- 
+
 * Android Project (Android)
   * Android project containing the app
 
@@ -64,18 +45,16 @@ To get the sample code do the following:
 
     git clone git://github.com/fbsamples/Wishlist
 
-**Creating your Facebook app**
-==============================
+### Creating your Facebook app
 
 First set up a Facebook app using the Developer app:
 
 * Create a new [Facebook app](https://developers.facebook.com/apps)
 * Enter the `App Namespace` when creating your app. You can choose a simple string to identify your app, such as ''wishlist'', but it must be unique.
 
-**Setting up your Open Graph action types, object types, and timeline units**
-=============================================================================
+### Setting up your Open Graph action types, object types, and timeline units
 
-You can now set up the application's action types, object types, and timeline units: 
+You can now set up the application's action types, object types, and timeline units:
 
 * Go to your app on the Facebook [Dev app](https://developers.facebook.com/apps)
 
@@ -133,8 +112,7 @@ You can now set up the application's action types, object types, and timeline un
   * Click "Add Filter"
   * Select wishlist.wishlist_id for the filter parameter and 2 as the value to filter on.
 
-**Setting up the the backend server using Heroku Cloud Services**
-=================================================================
+### Setting up the the backend server using Heroku Cloud Services
 
 * Go to your app on the Facebook [Dev app](https://developers.facebook.com/apps)
 
@@ -161,8 +139,7 @@ You can now set up the application's action types, object types, and timeline un
     * git push heroku master
 
 
-**Installing the Android app**
-==============================
+### Installing the Android app
 
 For more information on how to set up an Android app, see the [Android Tutorial](https://developers.facebook.com/docs/guides/mobile/android/)
 
@@ -180,7 +157,7 @@ For more information on how to set up an Android app, see the [Android Tutorial]
 
 5. Add reference to the Facebook SDK - follow the Step-3 instructions in the [Android Tutorial](https://developers.facebook.com/docs/guides/mobile/android/).
 
-6. Download [Apache HttpComponents](http://hc.apache.org/downloads.cgi) and add a reference to the httpmime-4.1.2.jar file: 
+6. Download [Apache HttpComponents](http://hc.apache.org/downloads.cgi) and add a reference to the httpmime-4.1.2.jar file:
     6. Go to Project->Properties->Java Build Path->Libraries->Add External Jars->Select httpmime-4.1.2.jar->OK
 
 7. Follow the //TODO in the Wishslist.java and add:
@@ -205,7 +182,7 @@ For more information on how to set up an Android app, see the [Android Tutorial]
     10. Go to Target tab -> Choose manual if you wish to run on the phone, else choose Automatic and select an AVD created in step 10.1
     10. Click Run and your 'Hackbook for Android' app should be up and running.
 
-**Installing the Facebook Android app**
+### Installing the Facebook Android app
 
 You will need to have the Facebook Android application on the handset or the emulator to test Single Sign On. The SDK includes a developer release of the Facebook application that can be side-loaded for testing purposes. On an actual device, you can just download the latest version of the app from the Android Market, but on the emulator you will have to install it yourself:
 
@@ -233,8 +210,7 @@ You will need to have the Facebook Android application on the handset or the emu
   * fetchPlaces() - fetch nearby places
 
 
-**Installing the iOS app**
-==========================
+### Installing the iOS app
 
 **Configuring the app**
 
@@ -273,3 +249,16 @@ You will need to have the Facebook Android application on the handset or the emu
   * Modify _iPhone App Store ID_ to add any valid iTunes app ID
   * Enable the _Configured for iOS SSO_ setting
 
+## Contributing
+
+All contributors must agree to and sign the [Facebook CLA](https://developers.facebook.com/opensource/cla) prior to submitting Pull Requests. We cannot accept Pull Requests until this document is signed and submitted.
+
+## License
+
+Copyright 2012-present Facebook, Inc.
+
+You are hereby granted a non-exclusive, worldwide, royalty-free license to use, copy, modify, and distribute this software in source code or binary form for use in connection with the web services and APIs provided by Facebook.
+
+As with any software that integrates with the Facebook platform, your use of this software is subject to the Facebook Developer Principles and Policies [http://developers.facebook.com/policy/]. This copyright notice shall be included in all copies or substantial portions of the software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
