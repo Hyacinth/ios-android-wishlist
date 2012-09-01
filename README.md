@@ -16,7 +16,7 @@ Authors: Christine Abernathy (caabernathy), Vikas Gupta (vksgupta)
 This section will walk you through the following:
 
 * Getting started
-* Creating your facebook app
+* Creating your Facebook app
 * Setting up your open graph action types, object types, and timeline units
 * Setting up the the backend server using heroku cloud services
 * Installing the android app
@@ -48,18 +48,18 @@ To get the sample code do the following:
 
     git clone git://github.com/fbsamples/ios-android-wishlist
 
-### Creating your facebook app
+### Creating your Facebook app
 
-First set up a facebook app using the developer app:
+First set up a Facebook app using the developer app:
 
-* Create a new [facebook app](https://developers.facebook.com/apps)
+* Create a new [Facebook app](https://developers.facebook.com/apps)
 * Enter the `app namespace` when creating your app. you can choose a simple string to identify your app, such as ''wishlist'', but it must be unique.
 
 ### Setting up your open graph action types, object types, and timeline units
 
 You can now set up the application's action types, object types, and timeline units:
 
-* Go to your app on the facebook [App Dashboard](https://developers.facebook.com/apps)
+* Go to your app on the Facebook [App Dashboard](https://developers.facebook.com/apps)
 
 * Go to open graph settings
 
@@ -117,7 +117,7 @@ You can now set up the application's action types, object types, and timeline un
 
 ### Setting up the the backend server using heroku cloud services
 
-* Go to your app on the facebook [App Dashboard](https://developers.facebook.com/apps)
+* Go to your app on the Facebook [App Dashboard](https://developers.facebook.com/apps)
 
 * Go to basic settings
 
@@ -135,7 +135,7 @@ You can now set up the application's action types, object types, and timeline un
   * For the files product.php and wishlists/*.php wherever you find them, replace:
      * `your_app_id` with your app id
      * `your_heroku_server_url` with your heroku host url
-     * `your_app_namespace` with the namespace for your facebook app
+     * `your_app_namespace` with the namespace for your Facebook app
   * Commit and push the local additions up to heroku
     * git add .
     * git commit -am "wishlist"
@@ -150,7 +150,7 @@ For more information on how to set up an android app, see the [android tutorial]
 
 2. Ensure you have installed the android plugin.
 
-3. Create facebook sdk project - follow the step-2 instructions in the [android tutorial](https://developers.facebook.com/docs/guides/mobile/android/).
+3. Create Facebook SDK project - follow the step-2 instructions in the [android tutorial](https://developers.facebook.com/docs/guides/mobile/android/).
 
 4. Create the wishlist project :
     4. Select __file__ -> __new__ -> __project__, choose __android project__, and then click __next__.
@@ -158,7 +158,7 @@ For more information on how to set up an android app, see the [android tutorial]
     4. Choose  wishlist folder. you should see the project properties populated.
     4. Click finish to continue.
 
-5. Add reference to the facebook sdk - follow the step-3 instructions in the [android tutorial](https://developers.facebook.com/docs/guides/mobile/android/).
+5. Add reference to the Facebook SDK - follow the step-3 instructions in the [android tutorial](https://developers.facebook.com/docs/guides/mobile/android/).
 
 6. Download [apache httpcomponents](http://hc.apache.org/downloads.cgi) and add a reference to the httpmime-4.1.2.jar file:
     6. Go to project->properties->java build path->libraries->add external jars->select httpmime-4.1.2.jar->ok
@@ -185,9 +185,9 @@ For more information on how to set up an android app, see the [android tutorial]
     10. Go to target tab -> choose manual if you wish to run on the phone, else choose automatic and select an avd created in step 10.1
     10. Click run and your 'hackbook for android' app should be up and running.
 
-### Installing the facebook android app
+### Installing the Facebook Android app
 
-You will need to have the facebook android application on the handset or the emulator to test single sign on. the sdk includes a developer release of the facebook application that can be side-loaded for testing purposes. on an actual device, you can just download the latest version of the app from the android market, but on the emulator you will have to install it yourself:
+You will need to have the Facebook Android application on the handset or the emulator to test single sign on. the sdk includes a developer release of the Facebook application that can be side-loaded for testing purposes. on an actual device, you can just download the latest version of the app from the android market, but on the emulator you will have to install it yourself:
 
       adb install fbandroid.apk
 
@@ -197,13 +197,13 @@ You will need to have the facebook android application on the handset or the emu
   * Launch the simulator
   * Login the user
   * Open command prompt and type 'telnet localhost 5554'
-  * Type geo fix -122.152004 37.416033 which is facebook hq lat lon
+  * Type geo fix -122.152004 37.416033 which is Facebook HQ lat lon
   * This sets the emulator location and will then fetch nearby places.
 
 **Quick code overview**
 
 * The main class which does the layout, login, and posting the cog story.
-  * initfacebook() - initialize the facebook object, restore session if available and display the login button.
+  * initfacebook() - initialize the Facebook object, restore session if available and display the login button.
   * maddtotimeline.setonclicklistener(new onclicklistener() - this activates the photo upload and publishing the cog story
   * uploadphoto() - upload the product image in a new thread at host_server_url + host_photo_upload_uri and on successful upload, triggers the addtotimeline()
   * addtotimeline() - publish a cog story using the graph api
@@ -237,25 +237,25 @@ Using Xcode open up Wishlist/Wishlist.xcodeproj
    1. Edit the bundle identifier information and make sure it matches the settings in the Facebook App Dashboard
 
 4. Set up to publish to your own backend server (assumption here is you set up a heroku server and copied over the sample files)
-   1. open up Viewcontroller.m
-   1. replace the kBackEndServer string with your back-end server url
-   1. in the publishAddToWishlist method, replace: `samplewishlist:add_to` with: `your_app_namespace:add_to` where your_app_namespace corresponds to the value defined earlier in the Facebook App Dashboard.
+   1. Open up Viewcontroller.m
+   1. Replace the kBackEndServer string with your back-end server url
+   1. In the `publishAddToWishlist` method, replace: `samplewishlist:add_to` with: `your_app_namespace:add_to` where `your_app_namespace` corresponds to the value defined earlier in the Facebook App Dashboard.
 
 **Configuring Facebook Distribution**
 
 * Edit your [App Dashboard](https://developers.facebook.com/apps) basic settings to add the Native iOS App Settings:
   * Enable the _configured for ios sso_ setting
 
-## contributing
+## Contributing
 
-all contributors must agree to and sign the [facebook cla](https://developers.facebook.com/opensource/cla) prior to submitting pull requests. we cannot accept pull requests until this document is signed and submitted.
+All contributors must agree to and sign the [Facebook cla](https://developers.facebook.com/opensource/cla) prior to submitting pull requests. we cannot accept pull requests until this document is signed and submitted.
 
-## license
+## License
 
-copyright 2012-present facebook, inc.
+Copyright 2012-present Facebook, Inc.
 
-you are hereby granted a non-exclusive, worldwide, royalty-free license to use, copy, modify, and distribute this software in source code or binary form for use in connection with the web services and apis provided by facebook.
+You are hereby granted a non-exclusive, worldwide, royalty-free license to use, copy, modify, and distribute this software in source code or binary form for use in connection with the web services and apis provided by Facebook.
 
-as with any software that integrates with the facebook platform, your use of this software is subject to the facebook developer principles and policies [http://developers.facebook.com/policy/]. this copyright notice shall be included in all copies or substantial portions of the software.
+As with any software that integrates with the Facebook platform, your use of this software is subject to the Facebook developer principles and policies [http://developers.facebook.com/policy/]. this copyright notice shall be included in all copies or substantial portions of the software.
 
-the software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. in no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
